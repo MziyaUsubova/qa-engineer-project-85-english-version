@@ -1,0 +1,21 @@
+---
+functional:
+  - Registered users can chat with each other.
+  - Users earn points, which are used to build rankings for the week, month, and all-time.
+  - Authorized users can watch the game progress.
+  - Users can select a game based on difficulty level.
+  - Users can choose a specific game when creating one.
+  - Users can play with anyone, including a bot or a friend.
+  
+non-functional:
+  - The site must be secure and protect user data.
+  - The site must be mobile-friendly.
+  - The site must be tested for compatibility with the latest browser versions:
+    Google Chrome version 96
+    Mozilla Firefox version 95
+    Safari version 15
+    Microsoft Edge version 96
+    
+implicit:
+  - Personal data must be securely stored on servers and protected from hacking.
+  - The interface should be intuitive, allowing players of different programming languages to easily understand and interact with the game
