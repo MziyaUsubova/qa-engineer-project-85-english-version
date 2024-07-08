@@ -1,0 +1,422 @@
+---
+- summary: |
+    User Registration Verification via Email
+  requirement: |
+    The user can register using their email address.
+  prerequisites:
+    Open the registration page.
+  test-data: |
+    Nickname = Mziya 
+    Email = usubova@ezid.ru 
+    Password = 123qwe
+  steps:
+    - Enter Nickname = Mziya
+    - Enter Email = usubova@ezid.ru
+    - Enter Password = 123qwe
+    - Confirm Password = 123qwe
+    - Click the Submit button
+  expected-result: |
+    User is successfully registered and redirected to the homepage.
+
+- summary: |
+    User Login Verification via GitHub
+  requirement: |
+    A user registered on GitHub can log in via GitHub.
+  prerequisites:
+    The user has a GitHub account. Open the login page.
+  test-data: |
+    Sign in with GitHub
+  steps:
+    - Click Sign in with GitHub
+  expected-result: |
+    Successful authorization, user is redirected to the homepage.
+
+- summary: |
+    User Login Verification via Discord
+  requirement: |
+    A user registered on Discord can log in via Discord.
+  prerequisites:
+    The user has a Discord account. Open the login page.
+  test-data: |
+    Sign in with Discord
+  steps:
+    - Click Sign in with Discord
+  expected-result: |
+    Successful authorization, user is redirected to the homepage.
+
+- summary: |
+    User Login Verification with Existing Email and Password
+  requirement: |
+    By entering the email and password used during registration, the user can log in to the system.
+  prerequisites: |
+    Open the login page.
+  test-data: |
+    Email = shaliko@ezid.ru 
+    Password = 123456
+  steps:
+    - Enter Email
+    - Enter Password
+    - Click the Submit button
+  expected-result: |
+    User successfully logs in and is redirected to the homepage.
+
+- summary: |
+    User Login Verification with Incorrect Email or Password
+  requirement: |
+    When entering an incorrect email or password, the user receives an error message.
+  prerequisites:
+    Open the login page.
+  test-data: |
+    Email = shaliko@ezid.ru 
+    Password = qwerty
+  steps:
+    - Enter Email
+    - Enter Password
+    - Click the Sign up button
+  expected-result: |
+    User receives an error message.
+
+- summary: |
+    Game Access Verification without Login
+  requirement: |
+    The user can play without logging in.
+  prerequisites:
+    Open the homepage.
+  test-data: |
+    Click TRY SIMPLE BATTLE
+  steps:
+    - Click TRY SIMPLE BATTLE
+  expected-result: |
+    User is redirected to the game page.
+
+- summary: |
+    User Logout Verification via Sign out Button
+  requirement: |
+    The user can log out of their account.
+  prerequisites:
+    Log in and redirect to the homepage.
+  test-data: |
+    Sign out
+  steps: 
+    - Click the nickname
+    - Click Sign out in the dropdown menu
+  expected-result: |
+    User logs out and the login/registration page is displayed.
+
+- summary: |
+    Game Creation Verification with a Bot
+  requirement: |
+    The user can create a game with a bot.
+  prerequisites:
+    Log in.
+  test-data: |
+    Create a new game
+  steps:
+    - Click Create new game
+    - Select Game Type with a bot
+    - Click Create battle
+    - Bot receives the challenge
+  expected-result: |
+    The game page is displayed.
+
+- summary: |
+    Game Creation Verification with a Friend
+  requirement: |
+    The user can create a game with a friend.
+  prerequisites:
+    Log in.
+  test-data: |
+    Create a new game
+  steps: 
+    - Click Create new game
+    - Select Game Type with a friend
+    - Click Create battle
+    - Friend receives the challenge
+    - Friend accepts the game
+  expected-result: |
+    The game page with the friend is displayed.
+
+- summary: |
+    Game Creation Verification with Another User
+  requirement: |
+    The user can create a game with another user.
+  prerequisites:
+    Log in.
+  test-data: |
+    Create a new game
+  steps:
+    - Click Create new game
+    - Select Game Type with other user
+    - Click Create battle
+    - Another user receives the challenge
+    - Another user accepts the game
+  expected-result: |
+    The game page with the other user is displayed.
+
+- summary: |
+    Game Creation Verification with Selected Difficulty Level
+  requirement: |
+    The user can create a game by selecting the difficulty level.
+  prerequisites:
+    Log in.
+  test-data: |
+    Create a new game
+  steps: 
+    - Click Create new game
+    - Select Level
+    - Click Create battle
+  expected-result: |
+    The game page with the selected level is displayed.
+
+- summary: |
+    Game Creation Verification with Time Control Settings
+  requirement: |
+    The user can create a game by setting the Time control.
+  prerequisites:
+    Log in.
+  test-data: |
+    Create a new game
+  steps: 
+    - Click Create new game
+    - Set Time control
+    - Click Create battle
+    - Another player receives the challenge
+    - Another player accepts the game
+  expected-result: |
+    The game with the set Time control is created, and the game page is displayed.
+
+- summary: |
+    User Invitation to Game Verification
+  requirement: |
+    The user can send a game invite to an online player.
+  prerequisites: 
+    Log in.
+  test-data: |
+    Send battle invite
+  steps:
+    - Click the sword icon
+    - In the popup window, select a player
+    - Click Create invite in the popup window
+    - Another player receives the invitation
+  expected-result: |  
+    The selected player receives and accepts the invitation.
+
+- summary: | 
+    New Tournament Creation Verification with Valid Date and Time
+  requirement: |
+    The user can create a new tournament by filling out the form.
+  prerequisites: |
+    Log in.
+  test-data: |
+    Starts at = 10.03.2024, 12:10
+  steps: 
+    - Click profile picture or name
+    - In the dropdown menu, select Tournaments
+    - Set Starts at = 10.03.2024, 12:10
+    - Click Create
+  expected-result: |
+    Tournament is created, and the tournament page with a countdown timer and "Waiting Participants" message is displayed.
+
+- summary: | 
+    New Tournament Creation Verification with Invalid Date and Time
+  requirement: |
+    The user can create a new tournament by filling out the form.
+  prerequisites: |
+    Log in.
+  test-data: |
+    Starts at = 10.03.2023, 12:10
+  steps: 
+    - Click profile picture
+    - In the dropdown menu, select Tournaments
+    - Set Starts at = 10.03.2023, 12:10
+    - Click Create
+  expected-result: |
+    An error message is displayed indicating incorrect date or time.
+
+- summary: |
+    Verification of Changing Programming Language During Task Solving
+  requirement: |    
+    The user can change the programming language while solving a task.
+  prerequisites:
+    A game is created.
+  test-data: |
+    Programming languages
+  steps:
+    - Open the task page.
+    - Select a programming language.
+    - Solve the task.
+    - Click the Programming languages dropdown.
+    - Select a different language from the dropdown menu.
+  expected-result: |
+    The programming language can be changed during the task solving.
+
+- summary: |
+    Verification of Both Players Seeing Each Other's Code Editor and Test Outputs
+  requirement: |
+    Users see the current code editor and test outputs of each other.
+  prerequisites:
+    A game is created.
+  test-data: 
+    Editor
+  steps: 
+    - One player types code.
+    - The other player sees the code in the editor.
+  expected-result: |
+    Players see each other's current code and test outputs in real-time.
+
+- summary: |
+    Verification of Switching Between Task Text Languages (Russian<=>English)
+  requirement: |
+    Tasks can be solved in both Russian and English.
+  prerequisites:  
+    A game is created.
+  test-data: |
+    Language
+  steps: 
+    - Open the game page.
+    - Click the language dropdown.
+    - Select the language from the dropdown menu.
+  expected-result: |
+    The task text switches between Russian and English.
+
+- summary: |
+    Verification of Authorized Users Watching the Game Progress
+  requirement: |
+    Other users can observe the game progress between two players.
+  prerequisites:  
+    The user is authorized.
+  test-data: |
+    Game between other users
+  steps: 
+    - Go to the homepage.
+    - Click LOBBY.
+    - Click SHOW.
+  expected-result: |
+    Other users see the current state of the game and the actions of both players in real-time.
+
+- summary: |    
+    Verification of Authorized Users Chatting
+  requirement: |
+    Logged-in users can chat.
+  prerequisites:  
+    The user is logged in.
+  test-data: |
+    Chat
+  steps:  
+    - Create a game.
+    - Type a message in the chat.
+  expected-result: | 
+    Chat is available for communication.
+
+- summary: |    
+    Verification of Try Simple Battle Users Chatting
+  requirement: |
+    Players can chat during the game without logging in.
+  prerequisites:  
+    The user is playing after clicking Try simple battle.
+  test-data: |
+    Chat
+  steps:  
+    - Type a message in the chat.
+  expected-result: | 
+    Chat is available for players using Try simple battle.
+
+- summary: |
+    Verification of Surrendering During the Game by Clicking the Flag Icon and Confirming with Give up
+  requirement: |
+    The player can surrender.
+  prerequisites:  
+    A game is created or playing without registration.
+  test-data: |
+    Flag icon and Give up
+  steps: 
+    - Click the flag icon.
+    - A confirmation message pops up with Give up or Cancel.
+    - Click Give up.
+  expected-result: |
+    A confirmation window appears indicating the player has surrendered.
+
+- summary: |
+    Verification of Clearing the Task Editor by Clicking the Refresh Icon
+  requirement: |
+    The task editor can be cleared while solving the task.
+  prerequisites:  
+    A game is created or playing without registration.
+  test-data: |
+    Refresh icon
+  steps: 
+    - Write code in the task editor.
+    - Click the Refresh icon.
+  expected-result: |
+    The entered text is cleared.
+
+- summary: |
+    Verification of Task Completion with the Run Button
+  requirement: |
+    The task is evaluated by the program.
+  prerequisites:  
+    Task completed.
+  test-data: |
+    Run icon
+  steps: 
+    - Click the Run icon.
+  expected-result: |
+    A congratulatory message appears if the task is correctly completed; otherwise, "failed" is displayed in the Output.
+
+- summary: |    
+    Availability of Game Replay After Completion
+  requirement: |
+    After the game ends, users have access to the game replay or its results.
+  prerequisites:  
+    Create a battle.
+  test-data: |
+    Game replay
+  steps: 
+    - Play a battle.
+    - Finish the game.
+    - Check the availability of the game replay.
+  expected-result: |
+    The user can view the replay of the completed game.
+
+- summary: | 
+    Verification of Points Awarded to User for Winning the Game
+  requirement: |
+    The player receives points for winning a battle.
+  prerequisites:  
+    A game is created.
+  test-data: |
+    Game
+  steps: 
+    - Complete the task correctly.
+  expected-result: |
+    The player receives points for the game.
+
+- summary: | 
+    Verification of User Rankings Based on Earned Points
+  requirement: |
+    User rankings are calculated based on points earned in games.
+  prerequisites:  
+    Check the current ranking. Create a game.
+  test-data: |
+    Ranking
+  steps: 
+    - Play a game.
+    - Earn points.
+    - Check the ranking.
+  expected-result: |
+    The ranking changes according to the points earned.
+
+- summary: |     
+    Verification of Weekly, Monthly, and All-Time Rankings
+  requirement: |
+    The system generates user rankings based on their activity for the last week, month, and all time.
+  prerequisites:  
+    Open the homepage.
+  test-data: |
+    Ranking
+  steps: 
+    - View user ranking for the last week.
+    - View user ranking for the last month.
+    - View overall user ranking for all time.
+  expected-result: |
+    Rankings are displayed for each specified time period, showing activity and achievements accordingly.    
