@@ -1,0 +1,111 @@
+- summary: |
+    Verification of User Registration via Email
+  status: pass
+
+- summary: |
+    Verification of User Login via GitHub
+  status: pass  
+
+- summary: |
+    Verification of User Login via Discord
+  status: pass
+
+- summary: |
+    Verification of User Login with Existing Email and Password
+  status: pass
+
+- summary: |
+    Verification of User Login with Non-Existent Email or Incorrect Password
+  status: pass    
+
+- summary: |
+    Verification of Playing Without Logging In 
+  status: pass         
+
+- summary: |
+    Verification of Logout via Sign Out Button
+  status: pass  
+
+- summary: |
+    Verification of Creating a Game with a Bot
+  status: pass    
+
+- summary: |
+    Verification of Creating a Game with a Friend
+  status: pass    
+
+- summary: |
+    Verification of Creating a Game with Another User
+  status: pass   
+
+- summary: |
+    Verification of Creating a Game by Selecting Difficulty Level
+  status: pass 
+
+- summary: |
+    Verification of Creating a Game Against Another Player with Set Speed
+  status: pass    
+
+- summary: |   
+    Verification of Inviting a User to a Game
+  status: pass
+
+- summary: | 
+    Verification of Creating a New Tournament with Correct Date and Time
+  status: pass  
+
+- summary: | 
+    Verification of Creating a New Tournament with Incorrect Date and Time
+  status: fail  
+
+- summary: |
+    Verification of Changing Programming Language During Task Solving
+  status: pass    
+
+- summary: |
+    Verification of Both Players Seeing Each Other's Code Editor and Test Outputs
+  status: pass   
+
+- summary: |
+    Verification of Switching Between Task Text Languages (Russian<=>English)
+  status: pass  
+
+- summary: |
+    Verification of Authorized Users Watching the Game Progress
+  status: pass
+
+- summary: |    
+    Verification of Authorized Users Chatting
+  status: pass
+
+- summary: |    
+    Verification of Try Simple Battle Users Chatting
+  status: pass   
+
+- summary: |
+    Verification of Surrendering During the Game by Clicking the Flag Icon and Confirming with Give Up
+  status: pass   
+
+- summary: |
+    Verification of Clearing the Task Editor by Clicking the Refresh Icon
+  status: pass  
+
+- summary: |
+    Verification of Task Completion with the Run Button
+  status: pass 
+
+- summary: |    
+    Availability of Game Replay After Completion
+  status: pass 
+
+- summary: | 
+    Verification of Points Awarded to User for Winning the Game
+  status: pass  
+
+- summary: | 
+    Verification of User Rankings Based on Earned Points
+  status: pass
+
+- summary: |     
+    Verification of Weekly, Monthly, and All-Time Rankings
+  status: pass
